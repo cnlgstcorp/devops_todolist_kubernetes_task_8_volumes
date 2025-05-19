@@ -29,10 +29,7 @@ spec:
             cpu: "150m"
         env:
         - name: PYTHONUNBUFFERED
-          valueFrom:
-            configMapKeyRef:
-              name: app-config
-              key: PYTHONUNBUFFERED
+          value: "1"
         - name: SECRET_KEY
           valueFrom:
             secretKeyRef:
